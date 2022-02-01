@@ -1,4 +1,4 @@
-export const getGifts = async (category) => {
+export const getGifs = async (category) => {
 
     try {
         const apiKey = "LW4ClBerndcomn8ovkeRGA0K16oNAs3Y";
@@ -9,7 +9,7 @@ export const getGifts = async (category) => {
 
         const {data} = await response.json();
 
-        const gifts = data.map(img => (
+        const gifs = data.map(img => (
             {
                 id: img.id,
                 title: img.title,
@@ -17,7 +17,7 @@ export const getGifts = async (category) => {
             }
         ))
 
-        return gifts
+        return gifs
 
 
     } catch (error) {
