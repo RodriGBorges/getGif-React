@@ -1,9 +1,30 @@
-function App() {
-  return (
-    <div className="App">
-      <h1>Giphy Expert</h1>
-    </div>
-  );
-}
+import React, {useState} from 'react';
+import {AddCategory} from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
-export default App;
+export const App = () => {
+
+  const [categories, setCategories] = useState([]);
+
+
+  return (
+    <>
+      <h1>Gifs Copados</h1>
+      {
+        <AddCategory
+        setCategories={setCategories}
+        />
+      }
+      <ol>
+        {
+          categories.map((category, index) => (
+            <GifGrid
+              key={category + index}
+              category={category}
+            />
+          ))
+        }
+      </ol>
+    </>
+  );
+};
