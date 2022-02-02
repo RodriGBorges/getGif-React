@@ -1,9 +1,12 @@
 *{
   font-family: Helvetica, Arial,sans-serif;
+  background-color: white;
+  text-align: center;
 }
 
 body{
   padding: 60px;
+  background-image: url("../public/fondo.jpg");
 }
 
 input{

@@ -9,7 +9,7 @@ export const App = () => {
 
   return (
     <>
-      <h1>Gifs Copados</h1>
+      <h1>Buscador de gifs copados</h1>
       {
         <AddCategory
         setCategories={setCategories}
